@@ -19,8 +19,8 @@ def main(argv):
     strr=strr.replace('[','')            #去掉方括号
     strr=strr.replace(']','')
     strr=strr.replace(' ','')
-
     strr=strr.split(",")   #以逗号为分割符号，分割字符串为数组
+    
     print("****************************************")
     print("您查询的IP地址 %s 来源地是（限制50次每天）："%args)
     print("国家：%s"%(strr[0]))  #访问数组里面的值
