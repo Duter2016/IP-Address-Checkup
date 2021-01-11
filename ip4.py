@@ -11,7 +11,7 @@ import requests
 import json
 
 def geocodebatch(location):
-    parameters = {'location': location, 'key': '1937b7ce560bb5124088b2cc5c07687b', 'batch': 'true'}
+    parameters = {'location': location, 'key': '你的高德地图apiKEY', 'batch': 'true'}
     base = 'http://restapi.amap.com/v3/geocode/regeo'
     response4 = requests.get(base, parameters)
     answer = response4.json()
@@ -19,7 +19,7 @@ def geocodebatch(location):
 
 def main(argv):
     url4 = 'http://restapi.amap.com/v3/ip?ip='  #高德地图，ipv4
-    url4key = '&key=1937b7ce560bb5124088b2cc5c07687b'
+    url4key = '&key=你的高德地图apiKEY'
     args = sys.argv[1]
     url5 = url4 + format(args) + url4key
     response5 = requests.get(url5)

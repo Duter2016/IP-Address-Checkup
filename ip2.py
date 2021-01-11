@@ -11,7 +11,7 @@ import requests
 import json
 
 def geocode(location):
-    parameters = {'location': location, 'key': '1937b7ce560bb5124088b2cc5c07687b'}
+    parameters = {'location': location, 'key': '你的高德地图apiKEY'}
     base = 'http://restapi.amap.com/v3/geocode/regeo'
     response4 = requests.get(base, parameters)
     answer = response4.json()

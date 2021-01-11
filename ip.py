@@ -11,14 +11,14 @@ import json
 from bs4 import BeautifulSoup
 
 def geocode(location):
-    parameters = {'location': location, 'key': '1937b7ce560bb5124088b2cc5c07687b'}
+    parameters = {'location': location, 'key': '你的高德地图apiKEY'}
     base = 'http://restapi.amap.com/v3/geocode/regeo'
     response4 = requests.get(base, parameters)
     answer = response4.json()
     return answer
 
 def geocodebatch(location):
-    parameters = {'location': location, 'key': '1937b7ce560bb5124088b2cc5c07687b', 'batch': 'true'}
+    parameters = {'location': location, 'key': '你的高德地图apiKEY', 'batch': 'true'}
     base = 'http://restapi.amap.com/v3/geocode/regeo'
     response4 = requests.get(base, parameters)
     answer = response4.json()
@@ -31,7 +31,7 @@ def main(argv):
     url2cn = '?lang=zh-CN'   #ip-api中文接口，ipv4及ipv6
     url3 = 'https://ip.yinghualuo.cn/api?ip='   #中文免费，ipv4及ipv6
     url4 = 'http://restapi.amap.com/v3/ip?ip='  #高德地图，ipv4
-    url4key = '&key=1937b7ce560bb5124088b2cc5c07687b'
+    url4key = '&key=你的高德地图apiKEY'
     args = sys.argv[1]
     url=url+format(args)
     url2 = url2 + format(args) + url2cn
